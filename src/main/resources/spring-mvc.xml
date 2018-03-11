@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <context:component-scan base-package="com.dawn.*"/>
+
+    <bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+        <property name="locations">
+            <list>
+                <value>classpath:jdbc.properties</value>
+            </list>
+        </property>
+    </bean>
+    
+    <import resource="spring-mybatis.xml"/>
+
+
+    <bean name="account" class="com.dawn.zhao.bean.Account">
+        <property name="id" value="6666"/>
+        <property name="account" value="764562461"/>
+        <property name="brithDay" value="2018-01-14 00:34:00"/>
+        <property name="clazz" value="com.dawn.zhao.bean.Account"/>
+    </bean>
+
+    <bean class="org.springframework.beans.factory.config.CustomEditorConfigurer">
+        <property name="propertyEditorRegistrars">
+            <list><bean class="com.dawn.zhao.bean.editor.registrar.DawnPropertyEditorRegistrar"/></list>
+        </property>
+    </bean>
+
+
+</beans>
