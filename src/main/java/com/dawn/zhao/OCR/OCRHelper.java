@@ -45,7 +45,7 @@ public class OCRHelper
     private final String LANG_OPTION = "-l";
     private final String EOL = System.getProperty("line.separator");
     /**
-     * 文件位置我防止在，项目同一路径
+     * 文件位置我放在，项目同一路径
      */
     private String tessPath = new File("tesseract").getAbsolutePath();
 

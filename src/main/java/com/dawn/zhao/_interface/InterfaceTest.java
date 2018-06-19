@@ -4,7 +4,7 @@ public interface InterfaceTest {
 
     public void testa();
 
-    public default String testb(){
+    default String testb(){
         return "testB";
     }
 }

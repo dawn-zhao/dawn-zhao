@@ -1,12 +1,11 @@
 package com.dawn.zhao.jvm;
 
 
-import com.dawn.zhao.bean.User;
-
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.TimeUnit;
-import java.util.function.Function;
 
 public class DawnZhao {
     public static String zhao = "zhao";
@@ -16,18 +15,18 @@ public class DawnZhao {
 
     public static void main(String[] args) throws  Exception {
         //协议的反查
-//		File file = new File("CGV-Advert/CGV-UOP/src/main/resources/dev-adv/redis-config.properties");
+//		File file = new File("C:\\WorkSpace\\server\\dawn-zhao\\src\\main\\resources\\application.properties");
 //		URL url = file.toURI().toURL();
 //		URLConnection urlConnection = url.openConnection();
 //		InputStream inputStream = urlConnection.getInputStream();
 //		System.out.println(StreamUtils.copyToString(inputStream, Charset.forName("UTF-8")));
 
-        //实现'dawn'协议sun.net.www.protocol.dawn.Handler
+//        实现'dawn'协议sun.net.www.protocol.dawn.Handler
 //		ClassLoader classLoader = ApplicationContext.class.getClassLoader();
 //		URL url = new URL("dawn://META-INF/notice.txt");
 //		InputStream inputStream = url.openStream();
-//		resources
-//		System.out.println(StreamUtils.copyToString(inputStream,Charset.forName("UTF-8")));
+////		resources
+//		System.out.println(StreamUtils.copyToString(inputStream, Charset.forName("UTF-8")));
 
 //        ResourceLoader resources = new DefaultResourceLoader();
 //        Resource resource = resources.getResource("dawn://dev-adv/redis-config.properties");

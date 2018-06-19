@@ -9,7 +9,6 @@ import java.util.concurrent.*;
  * corePoolSize参数为线程池内运行线程的个数,同时运行线程个数
  * maximumPoolSize并非最大线程数量,可以理解为线程弹性扩张数
  * maximumPoolSize不能小于corePoolSize,否则会抛出异常IllegalArgumentException
- *
  */
 public class ThreadPoolExecutorDemo {
 

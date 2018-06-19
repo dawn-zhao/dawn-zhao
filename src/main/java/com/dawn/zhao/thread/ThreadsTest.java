@@ -3,7 +3,7 @@ package com.dawn.zhao.thread;
 public class ThreadsTest {
 
     private int num; //输出数字
-    private int runThreadNum; //当前运行线程编号
+    private int runThreadNum; //当前可运行通过的线程号
 
     public ThreadsTest(int num, int runThreadNum){
         this.num = num;
@@ -27,11 +27,6 @@ public class ThreadsTest {
         public void run() {
             synchronized (test) {
                 try{
-                    if(test.getRunThreadNum()==4){
-                        System.out.println(" thread 4 waiting ");
-                        test.wait(1000,1);
-                        System.out.println(" thread 4 go on ");
-                    }
                     for (int i=1; i<=5; i++){
                         while(true){
                             System.out.println("当前线程为："+threadNum+", 释放线程为："+test.runThreadNum);
@@ -75,8 +70,6 @@ public class ThreadsTest {
 
     public static void main(String[] args) throws Exception {
         ThreadsTest test = new ThreadsTest(0,1);
-        new ThreadDemo(4,new ThreadsTest(0,4)).start();
-
         new ThreadDemo(1,test).start();
         new ThreadDemo(2,test).start();
         new ThreadDemo(3,test).start();

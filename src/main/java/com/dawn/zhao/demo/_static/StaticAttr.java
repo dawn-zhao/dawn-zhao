@@ -1,5 +1,7 @@
 package com.dawn.zhao.demo._static;
 
+import com.dawn.zhao.demo.DemoClass2;
+
 import java.util.Objects;
 
 public class StaticAttr {

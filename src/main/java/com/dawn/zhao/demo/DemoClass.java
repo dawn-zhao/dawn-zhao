@@ -7,9 +7,7 @@ import java.io.IOException;
 import java.nio.charset.Charset;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.TimeZone;
+import java.util.*;
 
 public class DemoClass {
 
@@ -120,7 +118,58 @@ public class DemoClass {
 //        Date date = simpleDateFormat.parse("2018-02-05T06:15:31.4681102Z");
 //        System.out.println(date);
 //        System.out.println(new UUIDHexGenerator().generate().toString());
+        List<Integer> primeNumbers = new ArrayList<>();
+        List<Integer> noRole = new ArrayList<>();
+        int i = 1;
+        System.out.println(Integer.MAX_VALUE);
+        while (true && i<Integer.MAX_VALUE){
+            boolean isPrimeNumber = isPrimeNumber(++i);
+            if(isPrimeNumber){
+                primeNumbers.add(i);
+                continue;
+            }
+
+            isRole://判断一个非质数的大于2的偶数,是否为两个质数和,如果是则符合规则
+            for (int p = 0; p < primeNumbers.size(); p++) {
+                for (int p1 = 0; p1 < primeNumbers.size(); p1++) {
+                    if((primeNumbers.get(p)+primeNumbers.get(p1)) == i){
+                        System.out.println(primeNumbers.get(p)+" + "+primeNumbers.get(p1)+ " = " + i);
+                        break isRole;
+                    }
+                }
+                if(p == primeNumbers.size()){
+                    noRole.add(i);
+                    System.out.println(i);
+                }
+            }
+        }
+        System.out.println(i);
     }
+
+
+    //判断一个数是否是质数（素数）
+    public static boolean isPrimeNumber(int num){
+        if(num == 2) return true;//2特殊处理
+        if(num < 2 || num % 2 == 0) return false;//识别小于2的数和偶数
+        for(int i=3; i<=Math.sqrt(num); i+=2){
+            if( num % 2 == 0)
+                return false;
+            if(num % i == 0)//识别被奇数整除
+                return false;
+        }
+        return true;
+    }
+
+//    static boolean isPrimeNumber(int a){
+//        boolean ean = true;
+//        for(int i=2;i< Math.sqrt(a);i++){ //Math.sqrt 是调用Math类中的sqrt方法，求一个数的平方根
+//            if(a%i==0){
+//                ean = false;
+//                break;
+//            }
+//        }
+//        return ean;
+//    }
 
     private static Logger logger = Logger.getLogger(DemoClass.class);
 

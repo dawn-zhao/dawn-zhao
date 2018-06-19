@@ -2,10 +2,11 @@ package com.dawn.zhao.bean;
 
 import com.baidu.bjf.remoting.protobuf.FieldType;
 import com.baidu.bjf.remoting.protobuf.annotation.Protobuf;
+import com.dawn.zhao._interface.Action;
 
 import java.io.*;
 
-public class User extends Account implements Serializable, Cloneable {
+public class User extends Account implements Serializable, Cloneable, Action {
 
     private static String country;
 
@@ -127,5 +128,15 @@ public class User extends Account implements Serializable, Cloneable {
             e.printStackTrace();
         }
         return user;
+    }
+
+    @Override
+    public void eat() {
+        System.out.println(" 吃饭，吃东西，吃零食 ");
+    }
+
+    @Override
+    public void sleep() {
+        System.out.println(" 睡觉，晚安 ");
     }
 }
