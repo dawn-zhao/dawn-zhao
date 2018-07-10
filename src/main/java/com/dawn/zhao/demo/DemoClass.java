@@ -8,6 +8,7 @@ import java.nio.charset.Charset;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.*;
+import java.util.concurrent.TimeUnit;
 
 public class DemoClass {
 
@@ -52,7 +53,7 @@ public class DemoClass {
 //        }
 //    }
 
-    public static void main(String[] args) throws IOException, ParseException {
+    public static void main(String[] args) throws IOException, ParseException, InterruptedException {
 //        Group group = new Group();
 //        System.out.println("demo done");
 //        for (int i = 0; i < 100; i++) {
@@ -118,32 +119,34 @@ public class DemoClass {
 //        Date date = simpleDateFormat.parse("2018-02-05T06:15:31.4681102Z");
 //        System.out.println(date);
 //        System.out.println(new UUIDHexGenerator().generate().toString());
-        List<Integer> primeNumbers = new ArrayList<>();
-        List<Integer> noRole = new ArrayList<>();
-        int i = 1;
-        System.out.println(Integer.MAX_VALUE);
-        while (true && i<Integer.MAX_VALUE){
-            boolean isPrimeNumber = isPrimeNumber(++i);
-            if(isPrimeNumber){
-                primeNumbers.add(i);
-                continue;
-            }
 
-            isRole://判断一个非质数的大于2的偶数,是否为两个质数和,如果是则符合规则
-            for (int p = 0; p < primeNumbers.size(); p++) {
-                for (int p1 = 0; p1 < primeNumbers.size(); p1++) {
-                    if((primeNumbers.get(p)+primeNumbers.get(p1)) == i){
-                        System.out.println(primeNumbers.get(p)+" + "+primeNumbers.get(p1)+ " = " + i);
-                        break isRole;
-                    }
-                }
-                if(p == primeNumbers.size()){
-                    noRole.add(i);
-                    System.out.println(i);
-                }
-            }
-        }
-        System.out.println(i);
+//        List<Integer> primeNumbers = new ArrayList<>();
+//        List<Integer> noRole = new ArrayList<>();
+//        int i = 1;
+//        System.out.println(Integer.MAX_VALUE);
+//        while (true && i<Integer.MAX_VALUE){
+//            boolean isPrimeNumber = isPrimeNumber(++i);
+//            if(isPrimeNumber){
+//                primeNumbers.add(i);
+//                continue;
+//            }
+//
+//            isRole://判断一个非质数的大于2的偶数,是否为两个质数和,如果是则符合规则
+//            for (int p = 0; p < primeNumbers.size(); p++) {
+//                for (int p1 = 0; p1 < primeNumbers.size(); p1++) {
+//                    if((primeNumbers.get(p)+primeNumbers.get(p1)) == i){
+//                        System.out.println(primeNumbers.get(p)+" + "+primeNumbers.get(p1)+ " = " + i);
+//                        break isRole;
+//                    }
+//                }
+//                if(p == primeNumbers.size()){
+//                    noRole.add(i);
+//                    System.out.println(i);
+//                }
+//            }
+//        }
+//        System.out.println(i);
+        TimeUnit.SECONDS.sleep(1);
     }
 
 

@@ -11,9 +11,9 @@ public class RedisUtils {
 
     public static void main(String[] args) {
 
-        String host = "192.168.0.110";
+        String host = "192.168.1.41";
         String port = "6379";
-        String password = "kokozu-redis-1029";
+        String password = "123456";
 
         JedisPoolConfig config = new JedisPoolConfig();
         config.setMaxTotal(300);
@@ -23,13 +23,22 @@ public class RedisUtils {
 
         JedisPool jedisPool = new JedisPool(config, host, Integer.valueOf(port),
                 Protocol.DEFAULT_TIMEOUT, password);
-        Jedis jedis = jedisPool.getResource();
-        Set<String> keySet = jedis.keys("*");
-        for (String s : keySet) {
-            if(s.contains("user_lock_key_85")){
-                jedis.del(s);
-            }
+//        Set<String> keySet = jedis.keys("*");
+//        for (String s : keySet) {
+//            if(s.contains("user_lock_key_85")){
+//                jedis.del(s);
+//            }
+//        }
+//        jedisPool.returnResource(jedis);
+        try(Jedis jedis = jedisPool.getResource()){
+            String results = jedis.set("111key", "value", "NX", "PX", 10000);
+            System.out.println(results);
+
+            results = jedis.set("111key", "1111111111", "NX", "PX", 10000);
+            System.out.println(results);
+
+//            Long a = jedis.del("111key");
+//            System.out.println(a);
         }
-        jedisPool.returnResource(jedis);
     }
 }

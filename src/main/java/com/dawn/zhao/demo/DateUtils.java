@@ -4,7 +4,7 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
-public class dateutils {
+public class DateUtils {
 
     public static void main(String[] args) {
 //        TimeUnit unit = TimeUnit.MINUTES;
@@ -52,4 +52,5 @@ public class dateutils {
 //        System.out.println(calendar2.get);
 
     }
+
 }
