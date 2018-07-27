@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configuration debug="false" scan="true" scanPeriod="1 minutes">
+
+    <property name="LOG_HOME" value="logs"/>
+
+    <!-- 控制台输出 -->
+    <appender name="stdout" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder charset="UTF-8">
+            <pattern>[%d{yyyy-MM-dd HH:mm:ss.SSS}]--[%thread]--[%-5level]--[%logger{30}.%M\(%line\)]--[%msg]%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- error -->
+    <appender name="globalError"
+              class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <level>ERROR</level>
+            <onMatch>ACCEPT</onMatch>
+            <onMismatch>DENY</onMismatch>
+        </filter>
+        <append>true</append>
+        <file>${LOG_HOME}/dawn-zhao-error.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <FileNamePattern>${LOG_HOME}/dawn-zhao-error.%d{yyyy-MM-dd}.log</FileNamePattern>
+            <MaxHistory>30</MaxHistory>
+        </rollingPolicy>
+        <encoder charset="UTF-8">
+            <pattern>[%d{yyyy-MM-dd HH:mm:ss.SSS}]--[%thread]--[%-5level]--[%logger{30}.%M\(%line\)]--[%msg]%n</pattern>
+        </encoder>
+    </appender>
+
+    <appender name="applog" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${LOG_HOME}/dawn-zhao.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <!--按天滚动-->
+            <FileNamePattern>${LOG_HOME}/dawn-zhao-%d{yyyy-MM-dd}-%i.log</FileNamePattern>
+            <maxHistory>30</maxHistory>
+            <TimeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+                <MaxFileSize>300MB</MaxFileSize>
+            </TimeBasedFileNamingAndTriggeringPolicy>
+        </rollingPolicy>
+        <append>true</append>
+        <encoder charset="UTF-8">
+            <pattern>[%d{yyyy-MM-dd HH:mm:ss.SSS}]--[%thread]--[%-5level]--[%logger{30}.%M\(%line\)]--[%msg]%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- 打印sql -->
+    <appender name="FILE-SQL" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${LOG_HOME}/dawn-zhao-sql.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <FileNamePattern>${LOG_HOME}/dawn-zhao-sql.%d{yyyy-MM-dd}.%i.log</FileNamePattern>
+            <maxHistory>30</maxHistory>
+            <TimeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+                <MaxFileSize>300MB</MaxFileSize>
+            </TimeBasedFileNamingAndTriggeringPolicy>
+        </rollingPolicy>
+        <append>true</append>
+        <encoder charset="UTF-8">
+            <!-- %-40(%-35logger{35}:%-4line) -->
+            <Pattern>[%d{yyyy-MM-dd HH:mm:ss.SSS}]--[%thread]--[%-5level]--[%logger{30}]--[%msg]%n</Pattern>
+        </encoder>
+    </appender>
+
+
+    <!-- spring 配置日志 -->
+    <logger name="org.springframework" level="WARN" additivity="false">
+        <appender-ref ref="stdout"/>
+        <appender-ref ref="globalError"/>
+        <appender-ref ref="applog"/>
+    </logger>
+
+    <!-- 项目自己配置日志 -->
+    <logger name="com.dawn.zhao" level="INFO" additivity="false">
+        <appender-ref ref="applog"/>
+        <appender-ref ref="stdout"/>
+        <appender-ref ref="globalError"/>
+    </logger>
+
+    <logger name="org.apache.ibatis" level="DEBUG">
+        <appender-ref ref="stdout"/>
+        <appender-ref ref="FILE-SQL"/>
+    </logger>
+
+    <logger name="java.sql" level="debug">
+        <appender-ref ref="stdout"/>
+        <appender-ref ref="FILE-SQL"/>
+    </logger>
+
+
+    <root level="INFO">
+        <appender-ref ref="stdout"/>
+    </root>
+
+</configuration>

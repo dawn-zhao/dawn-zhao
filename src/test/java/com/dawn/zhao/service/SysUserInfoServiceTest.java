@@ -2,20 +2,11 @@ package com.dawn.zhao.service;
 
 import com.alibaba.fastjson.JSONObject;
 import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.test.context.ContextConfiguration;
-import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisPool;
 
 import javax.annotation.Resource;
-import java.sql.SQLException;
-import java.util.HashMap;
-import java.util.Map;
 
-@RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(locations = "classpath:spring-mvc.xml")
 public class SysUserInfoServiceTest {
 
 //    @Autowired
