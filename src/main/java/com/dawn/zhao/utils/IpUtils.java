@@ -1,9 +1,7 @@
 package com.dawn.zhao.utils;
 
-import java.net.InetAddress;
-import java.net.NetworkInterface;
-import java.net.SocketException;
-import java.net.UnknownHostException;
+import java.io.IOException;
+import java.net.*;
 import java.util.Enumeration;
 
 public class IpUtils {
@@ -43,6 +41,7 @@ public class IpUtils {
     public static void main(String[] args) throws UnknownHostException {
         Long beginTime = System.currentTimeMillis();
         System.out.println(getLocalIP());
+        System.out.println(getLocalPort());
         System.out.println("获取IP的时间 ： "+(System.currentTimeMillis()-beginTime)+"ms");
         System.out.println(System.getProperty("os.name"));
         System.out.println(System.getProperty("java.version"));
@@ -115,5 +114,17 @@ public class IpUtils {
         }
         System.out.println("IP:" + ip);
         return ip;
+    }
+
+    //读取空闲的可用端口
+    private static int getLocalPort(){
+        ServerSocket serverSocket;
+        try{
+            serverSocket = new ServerSocket(0);
+            return serverSocket.getLocalPort();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return 0;
     }
 }

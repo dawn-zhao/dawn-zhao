@@ -1,5 +1,7 @@
 package com.dawn.zhao.sign;
 
+import com.alibaba.fastjson.JSONArray;
+import com.alibaba.fastjson.JSONObject;
 import com.dawn.zhao.Constants;
 import org.apache.commons.codec.digest.DigestUtils;
 
@@ -9,13 +11,16 @@ public class Sign2 {
 
     //验签、 生成签名
     public static void main(String[] args) {
+
         String requestSign = "";
         TreeMap<String,String> map = new TreeMap<>();
+        map.put("longitude","116.466124");
+        map.put("latitude","39.998695");
         map.put("userId","70934");
-        map.put("latitude","39.551126");
-        map.put("longitude","116.272519");
-        map.put("time","1");
-        map.put("dataTime","1529564129000");
+        map.put("dataTime","0");
+        map.put("login_uid","70934");
+        map.put("login_token","49bd229230944c33314d22ecaf077268");
+        map.put("time","1539335356");
         List<String> keys = new ArrayList<>(map.keySet());
         Collections.sort(keys);
 
@@ -34,5 +39,7 @@ public class Sign2 {
         boolean equals = sign.equals(requestSign);
         System.out.println(sign);
 
+
     }
+
 }

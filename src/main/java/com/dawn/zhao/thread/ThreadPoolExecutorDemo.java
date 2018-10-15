@@ -12,7 +12,7 @@ import java.util.concurrent.*;
  */
 public class ThreadPoolExecutorDemo {
 
-    public static String lock = "just lock";
+    public static final String lock = "just lock";
 
 
     public static void main(String[] args) {
@@ -40,11 +40,11 @@ public class ThreadPoolExecutorDemo {
             System.out.println("BlockingQueue done");
 
             long beginTime = System.currentTimeMillis();
-            ThreadPoolExecutor executorService = new ThreadPoolExecutor(5, 50,500, TimeUnit.MILLISECONDS,threads);
-            executorService.allowCoreThreadTimeOut(true);
-            System.out.println(executorService.getTaskCount()+"个待执行的线程");
+            ThreadPoolExecutor threadPool = new ThreadPoolExecutor(5, 50,500, TimeUnit.MILLISECONDS,threads);
+            threadPool.allowCoreThreadTimeOut(true);
+            System.out.println(threadPool.getTaskCount()+"个待执行的线程");
 
-            executorService.prestartAllCoreThreads();
+            threadPool.prestartAllCoreThreads();
             try {
                 latch.await(300, TimeUnit.SECONDS);
 //            latch.await(5000, TimeUnit.MILLISECONDS);
@@ -52,10 +52,10 @@ public class ThreadPoolExecutorDemo {
                 System.err.println("线程池中断,串行主线程错误!!!可能产生脏数据？");
                 e.printStackTrace();
             }
-            executorService.shutdownNow();
-            System.out.println(executorService.toString());
-            System.out.println(" 最大并行线程数 : "+executorService.getLargestPoolSize());
-            System.out.println(" 执行完成的线程 : "+executorService.getCompletedTaskCount());
+            threadPool.shutdownNow();
+            System.out.println(threadPool.toString());
+            System.out.println(" 最大并行线程数 : "+threadPool.getLargestPoolSize());
+            System.out.println(" 执行完成的线程 : "+threadPool.getCompletedTaskCount());
 
 //        while (true){
 //            if(executorService.getActiveCount() == 0){
