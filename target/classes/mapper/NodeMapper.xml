@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.dawn.zhao.dao.TreeNodeMapper">
+
+  <resultMap id="NextTreeResultMap" type="com.dawn.zhao.bean.Node">
+    <result column="id" property="id"/>
+    <result column="name" property="name"/>
+    <collection column="id" property="next" javaType="java.util.ArrayList"
+                ofType="com.dawn.zhao.bean.Node" select="getNextNodeTree"/>
+  </resultMap>
+
+  <select id="getNodeTree" resultMap="NextTreeResultMap">
+    SELECT
+    id, name
+    FROM node
+    WHERE parent_id = 0
+  </select>
+</mapper>

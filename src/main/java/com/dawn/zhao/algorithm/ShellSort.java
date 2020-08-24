@@ -34,7 +34,7 @@ public class ShellSort {
                 if(arr[j]<arr[j-gap]){
                     int temp = arr[j];
                     while(j-gap>=0 && temp<arr[j-gap]){
-                        //移动法
+                        //移动法0
                         arr[j] = arr[j-gap];
                         j-=gap;
                     }

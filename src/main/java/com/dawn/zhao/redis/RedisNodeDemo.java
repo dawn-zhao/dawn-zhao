@@ -1,4 +1,4 @@
-package com.dawn.zhao;
+package com.dawn.zhao.redis;
 
 import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisPool;
@@ -7,7 +7,10 @@ import redis.clients.jedis.Protocol;
 
 import java.util.Set;
 
-public class RedisUtils {
+/**
+ * 单节点
+ */
+public class RedisNodeDemo {
 
     public static void main(String[] args) {
 

@@ -1,0 +1,612 @@
+[
+  {
+    "atk_range": "LONG_RANGE",
+    "hp": 3323,
+    "id": 1,
+    "magic_atk": 0,
+    "mp": 490,
+    "name": "安琪拉",
+    "physical_atk": 170,
+    "physical_defense": 83
+  },
+  {
+    "atk_range": "SHORT_RANGE",
+    "hp": 3437,
+    "id": 2,
+    "magic_atk": 0,
+    "mp": 0,
+    "name": "程咬金",
+    "physical_atk": 161,
+    "physical_defense": 125
+  },
+  {
+    "atk_range": "LONG_RANGE",
+    "hp": 3229,
+    "id": 3,
+    "magic_atk": 0,
+    "mp": 490,
+    "name": "妲己",
+    "physical_atk": 170,
+    "physical_defense": 86
+  },
+  {
+    "atk_range": "SHORT_RANGE",
+    "hp": 3535,
+    "id": 4,
+    "magic_atk": 0,
+    "mp": 420,
+    "name": "项羽",
+    "physical_atk": 157,
+    "physical_defense": 123
+  },
+  {
+    "atk_range": "SHORT_RANGE",
+    "hp": 3622,
+    "id": 5,
+    "magic_atk": 0,
+    "mp": 0,
+    "name": "亚瑟",
+    "physical_atk": 164,
+    "physical_defense": 98
+  },
+  {
+    "atk_range": "LONG_RANGE",
+    "hp": 2977,
+    "id": 6,
+    "magic_atk": 0,
+    "mp": 440,
+    "name": "虞姬",
+    "physical_atk": 165,
+    "physical_defense": 84
+  },
+  {
+    "atk_range": "SHORT_RANGE",
+    "hp": 3510,
+    "id": 7,
+    "magic_atk": 0,
+    "mp": 420,
+    "name": "白起",
+    "physical_atk": 158,
+    "physical_defense": 120
+  },
+  {
+    "atk_range": "LONG_RANGE",
+    "hp": 3205,
+    "id": 8,
+    "magic_atk": 0,
+    "mp": 490,
+    "name": "扁鹊",
+    "physical_atk": 168,
+    "physical_defense": 87
+  },
+  {
+    "atk_range": "LONG_RANGE",
+    "hp": 3238,
+    "id": 9,
+    "magic_atk": 0,
+    "mp": 480,
+    "name": "蔡文姬",
+    "physical_atk": 159,
+    "physical_defense": 96
+  },
+  {
+    "atk_range": "LONG_RANGE",
+    "hp": 3242,
+    "id": 10,
+    "magic_atk": 0,
+    "mp": 440,
+    "name": "狄仁杰",
+    "physical_atk": 169,
+    "physical_defense": 95
+  },
+  {
+    "atk_range": "NONE",
+    "hp": 3019,
+    "id": 11,
+    "magic_atk": 0,
+    "mp": 490,
+    "name": "貂婵",
+    "physical_atk": 167,
+    "physical_defense": 87
+  },
+  {
+    "atk_range": "NONE",
+    "hp": 3081,
+    "id": 12,
+    "magic_atk": 0,
+    "mp": 440,
+    "name": "刘备",
+    "physical_atk": 169,
+    "physical_defense": 88
+  },
+  {
+    "atk_range": "NONE",
+    "hp": 3083,
+    "id": 13,
+    "magic_atk": 0,
+    "mp": 420,
+    "name": "墨子",
+    "physical_atk": 181,
+    "physical_defense": 102
+  },
+  {
+    "atk_range": "NONE",
+    "hp": 3307,
+    "id": 14,
+    "magic_atk": 0,
+    "mp": 430,
+    "name": "夏侯惇",
+    "physical_atk": 159,
+    "physical_defense": 101
+  },
+  {
+    "atk_range": "NONE",
+    "hp": 3235,
+    "id": 15,
+    "magic_atk": 0,
+    "mp": 200,
+    "name": "不知火舞",
+    "physical_atk": 170,
+    "physical_defense": 89
+  },
+  {
+    "atk_range": "NONE",
+    "hp": 3531,
+    "id": 16,
+    "magic_atk": 0,
+    "mp": 0,
+    "name": "曹操",
+    "physical_atk": 174,
+    "physical_defense": 104
+  },
+  {
+    "atk_range": "NONE",
+    "hp": 3027,
+    "id": 17,
+    "magic_atk": 0,
+    "mp": 440,
+    "name": "成吉思汗",
+    "physical_atk": 184,
+    "physical_defense": 94
+  },
+  {
+    "atk_range": "NONE",
+    "hp": 3213,
+    "id": 18,
+    "magic_atk": 0,
+    "mp": 420,
+    "name": "达摩",
+    "physical_atk": 171,
+    "physical_defense": 95
+  },
+  {
+    "atk_range": "NONE",
+    "hp": 3434,
+    "id": 19,
+    "magic_atk": 0,
+    "mp": 430,
+    "name": "典韦",
+    "physical_atk": 168,
+    "physical_defense": 89
+  },
+  {
+    "atk_range": "NONE",
+    "hp": 3122,
+    "id": 20,
+    "magic_atk": 0,
+    "mp": 490,
+    "name": "高渐离",
+    "physical_atk": 163,
+    "physical_defense": 98
+  },
+  {
+    "atk_range": "NONE",
+    "hp": 2902,
+    "id": 21,
+    "magic_atk": 0,
+    "mp": 0,
+    "name": "宫本武藏",
+    "physical_atk": 157,
+    "physical_defense": 106
+  },
+  {
+    "atk_range": "NONE",
+    "hp": 3322,
+    "id": 22,
+    "magic_atk": 0,
+    "mp": 10,
+    "name": "关羽",
+    "physical_atk": 170,
+    "physical_defense": 101
+  },
+  {
+    "atk_range": "NONE",
+    "hp": 2988,
+    "id": 23,
+    "magic_atk": 0,
+    "mp": 430,
+    "name": "韩信",
+    "physical_atk": 172,
+    "physical_defense": 92
+  },
+  {
+    "atk_range": "NONE",
+    "hp": 3297,
+    "id": 24,
+    "magic_atk": 0,
+    "mp": 440,
+    "name": "后羿",
+    "physical_atk": 161,
+    "physical_defense": 89
+  },
+  {
+    "atk_range": "NONE",
+    "hp": 2886,
+    "id": 25,
+    "magic_atk": 0,
+    "mp": 0,
+    "name": "花木兰",
+    "physical_atk": 170,
+    "physical_defense": 86
+  },
+  {
+    "atk_range": "NONE",
+    "hp": 2958,
+    "id": 26,
+    "magic_atk": 0,
+    "mp": 490,
+    "name": "姜子牙",
+    "physical_atk": 168,
+    "physical_defense": 106
+  },
+  {
+    "atk_range": "NONE",
+    "hp": 3113,
+    "id": 27,
+    "magic_atk": 0,
+    "mp": 0,
+    "name": "荆轲",
+    "physical_atk": 177,
+    "physical_defense": 89
+  },
+  {
+    "atk_range": "NONE",
+    "hp": 3150,
+    "id": 28,
+    "magic_atk": 0,
+    "mp": 0,
+    "name": "橘右京",
+    "physical_atk": 165,
+    "physical_defense": 96
+  },
+  {
+    "atk_range": "NONE",
+    "hp": 3292,
+    "id": 29,
+    "magic_atk": 0,
+    "mp": 450,
+    "name": "兰陵王",
+    "physical_atk": 171,
+    "physical_defense": 85
+  },
+  {
+    "atk_range": "NONE",
+    "hp": 3370,
+    "id": 30,
+    "magic_atk": 0,
+    "mp": 430,
+    "name": "老夫子",
+    "physical_atk": 168,
+    "physical_defense": 100
+  },
+  {
+    "atk_range": "NONE",
+    "hp": 2968,
+    "id": 31,
+    "magic_atk": 0,
+    "mp": 450,
+    "name": "李白",
+    "physical_atk": 169,
+    "physical_defense": 98
+  },
+  {
+    "atk_range": "NONE",
+    "hp": 3007,
+    "id": 32,
+    "magic_atk": 0,
+    "mp": 440,
+    "name": "李元芳",
+    "physical_atk": 161,
+    "physical_defense": 87
+  },
+  {
+    "atk_range": "NONE",
+    "hp": 3558,
+    "id": 33,
+    "magic_atk": 0,
+    "mp": 420,
+    "name": "廉颇",
+    "physical_atk": 163,
+    "physical_defense": 132
+  },
+  {
+    "atk_range": "NONE",
+    "hp": 3369,
+    "id": 34,
+    "magic_atk": 0,
+    "mp": 470,
+    "name": "刘邦",
+    "physical_atk": 158,
+    "physical_defense": 125
+  },
+  {
+    "atk_range": "NONE",
+    "hp": 3364,
+    "id": 35,
+    "magic_atk": 0,
+    "mp": 420,
+    "name": "刘禅",
+    "physical_atk": 178,
+    "physical_defense": 139
+  },
+  {
+    "atk_range": "NONE",
+    "hp": 3401,
+    "id": 36,
+    "magic_atk": 0,
+    "mp": 440,
+    "name": "鲁班七号",
+    "physical_atk": 174,
+    "physical_defense": 88
+  },
+  {
+    "atk_range": "NONE",
+    "hp": 3021,
+    "id": 37,
+    "magic_atk": 0,
+    "mp": 450,
+    "name": "露娜",
+    "physical_atk": 163,
+    "physical_defense": 102
+  },
+  {
+    "atk_range": "NONE",
+    "hp": 3564,
+    "id": 38,
+    "magic_atk": 0,
+    "mp": 0,
+    "name": "吕布",
+    "physical_atk": 170,
+    "physical_defense": 99
+  },
+  {
+    "atk_range": "NONE",
+    "hp": 3041,
+    "id": 39,
+    "magic_atk": 0,
+    "mp": 200,
+    "name": "马可波罗",
+    "physical_atk": 175,
+    "physical_defense": 91
+  },
+  {
+    "atk_range": "NONE",
+    "hp": 3285,
+    "id": 40,
+    "magic_atk": 0,
+    "mp": 0,
+    "name": "半月",
+    "physical_atk": 152,
+    "physical_defense": 88
+  },
+  {
+    "atk_range": "NONE",
+    "hp": 3483,
+    "id": 41,
+    "magic_atk": 0,
+    "mp": 450,
+    "name": "哪吒",
+    "physical_atk": 159,
+    "physical_defense": 99
+  },
+  {
+    "atk_range": "NONE",
+    "hp": 3239,
+    "id": 42,
+    "magic_atk": 0,
+    "mp": 450,
+    "name": "娜可露露",
+    "physical_atk": 173,
+    "physical_defense": 86
+  },
+  {
+    "atk_range": "NONE",
+    "hp": 3537,
+    "id": 43,
+    "magic_atk": 0,
+    "mp": 470,
+    "name": "牛魔",
+    "physical_atk": 156,
+    "physical_defense": 109
+  },
+  {
+    "atk_range": "NONE",
+    "hp": 3208,
+    "id": 44,
+    "magic_atk": 0,
+    "mp": 470,
+    "name": "孙膑",
+    "physical_atk": 176,
+    "physical_defense": 98
+  },
+  {
+    "atk_range": "NONE",
+    "hp": 3235,
+    "id": 45,
+    "magic_atk": 0,
+    "mp": 440,
+    "name": "孙尚香",
+    "physical_atk": 172,
+    "physical_defense": 89
+  },
+  {
+    "atk_range": "NONE",
+    "hp": 3305,
+    "id": 46,
+    "magic_atk": 0,
+    "mp": 430,
+    "name": "孙悟空",
+    "physical_atk": 167,
+    "physical_defense": 98
+  },
+  {
+    "atk_range": "NONE",
+    "hp": 3443,
+    "id": 47,
+    "magic_atk": 0,
+    "mp": 420,
+    "name": "太乙真人",
+    "physical_atk": 154,
+    "physical_defense": 94
+  },
+  {
+    "atk_range": "NONE",
+    "hp": 3083,
+    "id": 48,
+    "magic_atk": 0,
+    "mp": 490,
+    "name": "王昭君",
+    "physical_atk": 165,
+    "physical_defense": 91
+  },
+  {
+    "atk_range": "NONE",
+    "hp": 2860,
+    "id": 49,
+    "magic_atk": 0,
+    "mp": 490,
+    "name": "武则天",
+    "physical_atk": 173,
+    "physical_defense": 95
+  },
+  {
+    "atk_range": "NONE",
+    "hp": 3088,
+    "id": 50,
+    "magic_atk": 0,
+    "mp": 490,
+    "name": "小乔",
+    "physical_atk": 153,
+    "physical_defense": 95
+  },
+  {
+    "atk_range": "NONE",
+    "hp": 2862,
+    "id": 51,
+    "magic_atk": 0,
+    "mp": 430,
+    "name": "雅典娜",
+    "physical_atk": 162,
+    "physical_defense": 106
+  },
+  {
+    "atk_range": "NONE",
+    "hp": 3339,
+    "id": 52,
+    "magic_atk": 0,
+    "mp": 420,
+    "name": "杨戬",
+    "physical_atk": 166,
+    "physical_defense": 98
+  },
+  {
+    "atk_range": "NONE",
+    "hp": 3125,
+    "id": 53,
+    "magic_atk": 0,
+    "mp": 490,
+    "name": "嬴政",
+    "physical_atk": 157,
+    "physical_defense": 91
+  },
+  {
+    "atk_range": "NONE",
+    "hp": 3450,
+    "id": 54,
+    "magic_atk": 0,
+    "mp": 100,
+    "name": "张飞",
+    "physical_atk": 153,
+    "physical_defense": 125
+  },
+  {
+    "atk_range": "NONE",
+    "hp": 3027,
+    "id": 55,
+    "magic_atk": 0,
+    "mp": 490,
+    "name": "张良",
+    "physical_atk": 170,
+    "physical_defense": 87
+  },
+  {
+    "atk_range": "NONE",
+    "hp": 3267,
+    "id": 56,
+    "magic_atk": 0,
+    "mp": 430,
+    "name": "赵云",
+    "physical_atk": 173,
+    "physical_defense": 84
+  },
+  {
+    "atk_range": "NONE",
+    "hp": 3041,
+    "id": 57,
+    "magic_atk": 0,
+    "mp": 490,
+    "name": "甄姬",
+    "physical_atk": 165,
+    "physical_defense": 87
+  },
+  {
+    "atk_range": "NONE",
+    "hp": 3420,
+    "id": 58,
+    "magic_atk": 0,
+    "mp": 490,
+    "name": "钟馗",
+    "physical_atk": 162,
+    "physical_defense": 99
+  },
+  {
+    "atk_range": "NONE",
+    "hp": 3150,
+    "id": 59,
+    "magic_atk": 0,
+    "mp": 430,
+    "name": "钟无艳",
+    "physical_atk": 164,
+    "physical_defense": 100
+  },
+  {
+    "atk_range": "NONE",
+    "hp": 3093,
+    "id": 60,
+    "magic_atk": 0,
+    "mp": 490,
+    "name": "周瑜",
+    "physical_atk": 160,
+    "physical_defense": 87
+  },
+  {
+    "atk_range": "NONE",
+    "hp": 3311,
+    "id": 61,
+    "magic_atk": 0,
+    "mp": 420,
+    "name": "庄周",
+    "physical_atk": 170,
+    "physical_defense": 150
+  }
+]
