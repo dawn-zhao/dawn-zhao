@@ -21,12 +21,12 @@ public class Reflect {
     public static void main(String[] args) throws ClassNotFoundException {
 
         Class class1 = Class.forName("com.dawn.zhao.reflect.World");
-        System.out.println(class1.getName());
+        System.out.printf("\nclass1 ___ %s ___ %s", class1.hashCode(), class1.getName());
 
         Class class2 = World.class;
-        System.out.println(class2.getName());
+        System.out.printf("\nclass2 ___ %s ___ %s", class2.hashCode(), class2.getName());
 
         Class class3 = new World().getClass();
-        System.out.println(class3.getName());
+        System.out.printf("\nclass3 ___ %s ___ %s", class3.hashCode(), class3.getName());
     }
 }
