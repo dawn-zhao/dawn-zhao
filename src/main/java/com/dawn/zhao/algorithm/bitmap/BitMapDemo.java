@@ -1,16 +1,16 @@
-package com.dawn.zhao.utils;
+package com.dawn.zhao.algorithm.bitmap;
 
 import java.util.Random;
 
 /**
- * 代码参照
- *  https://blog.csdn.net/a3192048/article/details/80261699
+ * https://blog.csdn.net/a3192048/article/details/80261699
  */
 public class BitMapDemo {
 
     private static final int CAPACITY = 1000000000;//数据容量
 
     // 定义一个byte数组缓存所有的数据
+    // 1 << 29 536870912
     private byte[] dataBytes = new byte[1 << 29];
 
     public static void main(String[] args) {
@@ -27,8 +27,8 @@ public class BitMapDemo {
                 System.out.println("读取了第 " + (i + 1) + "\t个数: " + num);
             }
         }
-//        bm.output(bytes);
         bm.lastNum(bytes);
+        bm.output(bytes);
     }
 
 
@@ -49,6 +49,7 @@ public class BitMapDemo {
         int innerIndex = (int) (bitIndex % 8);
 
         dataBytes[index] = (byte) (dataBytes[index] | (1 << innerIndex));
+
         return dataBytes;
     }
 

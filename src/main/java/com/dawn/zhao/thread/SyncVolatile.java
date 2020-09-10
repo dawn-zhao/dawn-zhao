@@ -15,8 +15,8 @@ public class SyncVolatile {
 
     public static void main(String[] args) throws InterruptedException {
         volatileThreadTest();
-        lockThreadTest();
-        atomicThreadTest();
+//        lockThreadTest();
+//        atomicThreadTest();
 
 //        Unsafe unsafe = Unsafe.getUnsafe();
 //        System.out.println(unsafe.addressSize());

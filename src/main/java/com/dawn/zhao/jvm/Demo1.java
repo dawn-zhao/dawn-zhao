@@ -7,7 +7,7 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.TimeUnit;
 
-public class DawnZhao {
+public class Demo1 {
     public static String zhao = "zhao";
     final String dawn = "dawn";
     private int age = 21;
@@ -331,7 +331,7 @@ public class DawnZhao {
 
     public static void classLoader(){
 
-        Class clazz = DawnZhao.class;
+        Class clazz = Demo1.class;
         System.out.println(clazz+" 类加载器为 ==》 "+clazz.getClassLoader());
         ClassLoader loader = clazz.getClassLoader();
         while (loader!=null){
@@ -465,8 +465,8 @@ public class DawnZhao {
         int a = 0,b=a;
         int c = a+b+9;
         int d = -1;
-        DawnZhao dawnZhao = new DawnZhao();
-        dawnZhao.testJvm("a",1);
+        Demo1 demo1 = new Demo1();
+        demo1.testJvm("a",1);
         System.out.println(d+":"+c);
         return;
     }

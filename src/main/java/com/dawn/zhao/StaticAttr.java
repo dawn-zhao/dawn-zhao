@@ -1,6 +1,7 @@
 package com.dawn.zhao;
 
 import com.dawn.zhao.demo.DemoClass2;
+import org.openjdk.jol.info.ClassLayout;
 
 public class StaticAttr {
 

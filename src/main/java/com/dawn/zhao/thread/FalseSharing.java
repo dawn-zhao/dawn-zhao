@@ -83,10 +83,11 @@ public class FalseSharing extends Thread {
         }
     }
 
+    //定义属性做缓存行填充
     public final static class VolatileLong
     {
+        public long v1, v2, v3, v4, v5, v6, v7; // comment out
         public volatile long value = 0L;
-        //定义属性做内存填充
-        public long p1, p2, p3, p4, p5, p6; // comment out
+        public long v8, v9, v10, v11, v12, v13, v14; // comment out
     }
 }
