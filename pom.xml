@@ -15,7 +15,7 @@
         <maven.compiler.target>${java.version}</maven.compiler.target>
         <jodd.version>3.9.1</jodd.version>
         <jedis.version>2.9.0</jedis.version>
-        <org.springframework.boot.version>2.0.3.RELEASE</org.springframework.boot.version>
+        <org.springframework.boot.version>2.5.12</org.springframework.boot.version>
         <tomcat.version>8.5.29</tomcat.version>
     </properties>
 
